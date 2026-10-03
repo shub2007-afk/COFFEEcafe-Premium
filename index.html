@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>COFFEEcafe | Premium Coffee Experience</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            COFFEE<span>cafe</span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#menu">
+                Menu
+            </a>
+
+            <a href="#story">
+                Our Story
+            </a>
+
+            <a href="#experience">
+                Experience
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </nav>
+
+        <button
+            class="cart-button"
+            onclick="toggleCart()"
+        >
+            Cart
+            <span id="cart-count">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section
+        class="hero"
+        id="home"
+    >
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                PREMIUM COFFEE EXPERIENCE
+            </p>
+
+            <h1>
+                Slow down.
+                <br>
+                Sip something
+                <span>beautiful.</span>
+            </h1>
+
+            <p class="hero-text">
+                Carefully roasted coffee, handcrafted drinks,
+                and a warm space designed for your everyday moments.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#menu"
+                    class="primary-button"
+                >
+                    Explore Menu
+                </a>
+
+                <a
+                    href="#story"
+                    class="secondary-button"
+                >
+                    Our Story
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-coffee">
+
+            <div class="coffee-glow"></div>
+
+            <div class="coffee-cup">
+
+                <div class="coffee-top">
+
+                    <div class="coffee-art"></div>
+
+                </div>
+
+                <div class="cup-body">
+                    COFFEEcafe
+                </div>
+
+                <div class="cup-handle"></div>
+
+            </div>
+
+            <div class="coffee-shadow"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRUST STRIP -->
+
+    <section class="trust-strip">
+
+        <div class="trust-item">
+
+            <strong>
+                100%
+            </strong>
+
+            <span>
+                Arabica Beans
+            </span>
+
+        </div>
+
+        <div class="trust-item">
+
+            <strong>
+                8+
+            </strong>
+
+            <span>
+                Years of Craft
+            </span>
+
+        </div>
+
+        <div class="trust-item">
+
+            <strong>
+                4.9/5
+            </strong>
+
+            <span>
+                Guest Rating
+            </span>
+
+        </div>
+
+        <div class="trust-item">
+
+            <strong>
+                Fresh
+            </strong>
+
+            <span>
+                Roasted Daily
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU SECTION -->
+
+    <section
+        class="menu-section"
+        id="menu"
+    >
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                OUR MENU
+            </p>
+
+            <h2>
+                Crafted for
+                <span>coffee lovers.</span>
+            </h2>
+
+            <p>
+                From classic espresso drinks to refreshing
+                cold creations, every cup is made with care.
+            </p>
+
+        </div>
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filter-buttons">
+
+            <button
+                class="filter-button active"
+                onclick="filterMenu('all')"
+            >
+                All
+            </button>
+
+            <button
+                class="filter-button"
+                onclick="filterMenu('hot')"
+            >
+                Hot Coffee
+            </button>
+
+            <button
+                class="filter-button"
+                onclick="filterMenu('cold')"
+            >
+                Cold Coffee
+            </button>
+
+            <button
+                class="filter-button"
+                onclick="filterMenu('food')"
+            >
+                Food
+            </button>
+
+        </div>
+
+
+        <!-- MENU GRID -->
+
+        <div
+            class="menu-grid"
+            id="menu-grid"
+        >
+
+            <!-- ITEM 1 -->
+
+            <div
+                class="menu-card"
+                data-category="hot"
+            >
+
+                <div class="product-image latte">
+                    ☕
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        HOT COFFEE
+                    </span>
+
+                    <h3>
+                        Velvet Latte
+                    </h3>
+
+                    <p>
+                        Smooth espresso with silky steamed milk.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹220
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Velvet Latte', 220)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 2 -->
+
+            <div
+                class="menu-card"
+                data-category="hot"
+            >
+
+                <div class="product-image cappuccino">
+                    ☕
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        HOT COFFEE
+                    </span>
+
+                    <h3>
+                        Classic Cappuccino
+                    </h3>
+
+                    <p>
+                        Rich espresso with creamy milk foam.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹190
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Classic Cappuccino', 190)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 3 -->
+
+            <div
+                class="menu-card"
+                data-category="hot"
+            >
+
+                <div class="product-image americano">
+                    ☕
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        HOT COFFEE
+                    </span>
+
+                    <h3>
+                        Roasted Americano
+                    </h3>
+
+                    <p>
+                        Bold espresso balanced with hot water.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹170
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Roasted Americano', 170)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 4 -->
+
+            <div
+                class="menu-card"
+                data-category="hot"
+            >
+
+                <div class="product-image mocha">
+                    ☕
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        HOT COFFEE
+                    </span>
+
+                    <h3>
+                        Dark Mocha
+                    </h3>
+
+                    <p>
+                        Espresso, dark chocolate and steamed milk.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹240
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Dark Mocha', 240)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 5 -->
+
+            <div
+                class="menu-card"
+                data-category="cold"
+            >
+
+                <div class="product-image cold">
+                    🧊
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        COLD COFFEE
+                    </span>
+
+                    <h3>
+                        Cold Brew
+                    </h3>
+
+                    <p>
+                        Slow-steeped coffee with a smooth finish.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹210
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Cold Brew', 210)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 6 -->
+
+            <div
+                class="menu-card"
+                data-category="cold"
+            >
+
+                <div class="product-image caramel">
+                    🥤
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        COLD COFFEE
+                    </span>
+
+                    <h3>
+                        Iced Caramel Latte
+                    </h3>
+
+                    <p>
+                        Chilled espresso with caramel and milk.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹230
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Iced Caramel Latte', 230)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 7 -->
+
+            <div
+                class="menu-card"
+                data-category="cold"
+            >
+
+                <div class="product-image matcha">
+                    🍵
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        SPECIAL
+                    </span>
+
+                    <h3>
+                        Matcha Cloud
+                    </h3>
+
+                    <p>
+                        Creamy matcha with a smooth milk foam.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹250
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Matcha Cloud', 250)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 8 -->
+
+            <div
+                class="menu-card"
+                data-category="food"
+            >
+
+                <div class="product-image food">
+                    🥐
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        BAKERY
+                    </span>
+
+                    <h3>
+                        Butter Croissant
+                    </h3>
+
+                    <p>
+                        Freshly baked, flaky and buttery.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹150
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Butter Croissant', 150)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 9 -->
+
+            <div
+                class="menu-card"
+                data-category="food"
+            >
+
+                <div class="product-image cake">
+                    🍰
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        DESSERT
+                    </span>
+
+                    <h3>
+                        Chocolate Torte
+                    </h3>
+
+                    <p>
+                        Rich chocolate dessert with a soft center.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹210
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Chocolate Torte', 210)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ITEM 10 -->
+
+            <div
+                class="menu-card"
+                data-category="food"
+            >
+
+                <div class="product-image sandwich">
+                    🥪
+                </div>
+
+                <div class="product-info">
+
+                    <span class="product-category">
+                        SAVOURY
+                    </span>
+
+                    <h3>
+                        Grilled Pesto Melt
+                    </h3>
+
+                    <p>
+                        Toasted bread, pesto, cheese and vegetables.
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ₹260
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Grilled Pesto Melt', 260)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STORY SECTION -->
+
+    <section
+        class="story-section"
+        id="story"
+    >
+
+        <div class="story-image">
+
+            <div class="story-circle">
+
+                <div class="story-cup">
+                    ☕
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="story-content">
+
+            <p class="small-title">
+                OUR STORY
+            </p>
+
+            <h2>
+                More than coffee.
+                <span>It's a ritual.</span>
+            </h2>
+
+            <p>
+                COFFEEcafe started with a simple idea:
+                create a place where people could slow down,
+                enjoy great coffee and spend meaningful time.
+            </p>
+
+            <p>
+                We carefully select our beans, roast them
+                with attention and prepare every drink fresh
+                for our guests.
+            </p>
+
+            <a
+                href="#contact"
+                class="primary-button"
+            >
+                Visit COFFEEcafe
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE SECTION -->
+
+    <section
+        class="experience-section"
+        id="experience"
+    >
+
+        <div class="section-heading">
+
+            <p class="small-title">
+                THE EXPERIENCE
+            </p>
+
+            <h2>
+                Designed for your
+                <span>best moments.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="experience-grid">
+
+            <div class="experience-card">
+
+                <div class="experience-icon">
+                    ☕
+                </div>
+
+                <h3>
+                    Handcrafted Coffee
+                </h3>
+
+                <p>
+                    Every drink is prepared by our baristas
+                    with attention to detail.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="experience-icon">
+                    ✦
+                </div>
+
+                <h3>
+                    Premium Ingredients
+                </h3>
+
+                <p>
+                    We use carefully selected ingredients
+                    to create a better coffee experience.
+                </p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <div class="experience-icon">
+                    ♡
+                </div>
+
+                <h3>
+                    Warm Atmosphere
+                </h3>
+
+                <p>
+                    A comfortable space for conversations,
+                    work, study and relaxing.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section
+        class="contact-section"
+        id="contact"
+    >
+
+        <div class="contact-content">
+
+            <p class="small-title">
+                FIND US
+            </p>
+
+            <h2>
+                Come in.
+                <span>Stay awhile.</span>
+            </h2>
+
+            <p>
+                123 Coffee Street,
+                Bandra West, Mumbai
+            </p>
+
+            <p>
+                8:00 AM — 10:00 PM
+            </p>
+
+            <button
+                class="primary-button"
+                onclick="showMessage()"
+            >
+                Get Directions
+            </button>
+
+        </div>
+
+
+        <div class="contact-box">
+
+            <h3>
+                COFFEEcafe
+            </h3>
+
+            <p>
+                Premium coffee.
+                Simple moments.
+            </p>
+
+            <div class="contact-line"></div>
+
+            <p>
+                Open every day
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART SIDEBAR -->
+
+    <aside
+        class="cart-sidebar"
+        id="cart-sidebar"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Your Cart
+            </h2>
+
+            <button
+                onclick="toggleCart()"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cart-items"
+        >
+
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cart-total">
+                    ₹0
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-button"
+                onclick="checkout()"
+            >
+                Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+                COFFEE<span>cafe</span>
+            </div>
+
+            <p>
+                Crafted coffee for beautiful moments.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#menu">
+                Menu
+            </a>
+
+            <a href="#story">
+                Story
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 COFFEEcafe. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
